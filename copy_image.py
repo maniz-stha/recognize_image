@@ -2,10 +2,10 @@ import face_recognition
 import glob
 from shutil import copy
 
-image = face_recognition.load_image_file("known_images/manish.jpg")
+image = face_recognition.load_image_file("known_images/image.jpg")
 manish_face_encoding = face_recognition.face_encodings(image)[0]
 
-unknown_images = glob.glob('sample_images/*')
+unknown_images = glob.glob('unknown_images/*')
 
 for image in unknown_images:
     faces = face_recognition.load_image_file(image)
